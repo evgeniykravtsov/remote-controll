@@ -1,0 +1,44 @@
+{
+  "name": "remote-controll",
+  "version": "1.0.0",
+  "description": "YOUR DESCRIPTION",
+  "main": "index.ts",
+  "scripts": {
+    "start": "npx ts-node src/index.ts",
+    "start:prod": "npx tsc && node out/index.js",
+    "build": "npx tsc",
+    "watch": "npx tsc src/index.ts --watch",
+    "lint": "npx eslint src/*.ts",
+    "lint:fix": "npx eslint src/*.ts --fix",
+    "format": "npx prettier src/*.ts --write",
+    "start:dev": "npx ts-node-dev --respawn src/index"
+  },
+  "keywords": [
+    "key",
+    "words"
+  ],
+  "author": "YOUR NAME <YOUR EMAIL>",
+  "license": "YOUR LICENSE",
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.18.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-node": "^4.1.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.7.1",
+    "ts-node": "^10.8.1",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "jimp": "^0.16.1",
+    "robotjs": "^0.6.0",
+    "ws": "^8.8.0"
+  }
+}
