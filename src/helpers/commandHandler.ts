@@ -1,9 +1,10 @@
 import { makeCircle } from './makeCircle';
 import { makeRectangle } from './makeRectangle';
+import { makePrintScreen } from './makePrintScreen';
 
 import * as robot from 'robotjs';
 
-export const commandHandler = (command: string, coordinate: string[]) => {
+export const commandHandler = async (command: string, coordinate: string[]) => {
   const { x, y } = robot.getMousePos();
   const numberCoordinate = Number(coordinate[0]);
   switch (command) {
@@ -28,5 +29,11 @@ export const commandHandler = (command: string, coordinate: string[]) => {
     case 'draw_square':
       makeRectangle(x, y, [numberCoordinate, numberCoordinate]);
       break;
+    case 'prnt_scrn':
+      const screen = await makePrintScreen(x, y, 200);
+      return screen;
+    default:
+      return 'Not found this command!';
   }
+  return '';
 };
