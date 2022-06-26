@@ -5,13 +5,13 @@
   "main": "index.ts",
   "scripts": {
     "start": "npx ts-node src/index.ts",
-    "start:source": "npx tsc && node out/index.ts",
+    "start:prod": "npx tsc && node out/index.js",
     "build": "npx tsc",
     "watch": "npx tsc src/index.ts --watch",
     "lint": "npx eslint src/*.ts",
     "lint:fix": "npx eslint src/*.ts --fix",
     "format": "npx prettier src/*.ts --write",
-    "dev": "npx ts-node-dev --respawn src/index"
+    "start:dev": "npx ts-node-dev --respawn src/index"
   },
   "keywords": [
     "key",
